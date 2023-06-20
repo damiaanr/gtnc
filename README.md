@@ -1,7 +1,7 @@
 # Google Translations from NewsCrawl (GTNC)
 This repository contains (1) a *many-to-one* dataset of original texts in 50 source languages and their corresponding translations into English using a recent version of Google Translate, and (2) the Python code that was used to generate it.
 
-## 1. About the dataset: use the data we generated
+## 1. About the dataset: use the data we generated!
 The dataset can be found in the `output` folder in this directory. The dataset contains two folders:
 
 1. `source`: Source text in original languages (contained in NewsCrawl)
@@ -10,13 +10,11 @@ The dataset can be found in the `output` folder in this directory. The dataset c
 Every folder contains either a `.src` or a `.trg` file for every language containg either source or translated (target) samples in line-by-line manner. If available, corresponding fluency scores are stored in `.scores` files (see below under *Cleaning steps*). Additionally, line-by-line Google Language Detection analyses for the first 750 samples are contained in `.detect` files (the ISO639-1 code of the detected language is followed by the confidence value).
 
 ### Details
-The dataset contains **7,500** samples of **~125 characters**-long translations in English (and their source texts) for **50** languages\* with the following ISO639-1 codes:
-
-`am`, `ar`, `bg`, `bn`, `cs`, `de`, `el`, `en`, `es`, `et`, `fa`, `fi`, `fr`, `gu`, `ha`, `hi`, `hr`, `hu`, `id`, `ig`, `is`, `it`, `ja`, `kn`, `ko`, `ky`, `lt`, `lv`, `mk`, `ml`, `mr`, `nl`, `om`, `or`, `pa`, `pl`, `ps`, `pt`, `ro`, `ru`, `sn`, `sw`, `ta`, `te`, `ti`, `tl`, `tr`, `uk`, `yo`, and `zh`
+The dataset contains **7,500** samples of **~125 characters**-long translations in English (and their source texts) for **50** languages\* with the following ISO639-1 codes: `am`, `ar`, `bg`, `bn`, `cs`, `de`, `el`, `en`, `es`, `et`, `fa`, `fi`, `fr`, `gu`, `ha`, `hi`, `hr`, `hu`, `id`, `ig`, `is`, `it`, `ja`, `kn`, `ko`, `ky`, `lt`, `lv`, `mk`, `ml`, `mr`, `nl`, `om`, `or`, `pa`, `pl`, `ps`, `pt`, `ro`, `ru`, `sn`, `sw`, `ta`, `te`, `ti`, `tl`, `tr`, `uk`, `yo`, and `zh`
 
 Original data was taken from the 2023 version of NewsCrawl (see [Findings of the 2022 Conference on Machine Translation (WMT22)](https://aclanthology.org/2022.wmt-1.1) (Kocmi et al., WMT 2022) and [the data directory](https://data.statmt.org/news-crawl/) itself). This data consists of individual sentences that were scraped from a wide range of online news outlets across different locales. The data were translated using the 19/06/2023-20/06/2023 (DD/MM/YYYY) v3 version of Google's Translation API using default edition settings. Several NewsCrawl-languages were excluded (9 out of 59) as they either contained too less data (`tig`, `bm`), were not supported by Google Translate (`nr`), were found to be too noisy (`rw`, `so`), were close to other languages and therefore not contributing to the diversity of the dataset (`bs`, `sr`, `kk`), or the former in combination with containing too few [WALS](https://wals.info/) features, making them less usable (`af`). The 50 remaining languages are of high typological diversity. 
 
-*\* `en` (English) did not need to be translated*
+*\* `en` did not need to be translated*
 
 ### Cleaning steps 
 The following steps were performed on the data to ensure that individual samples are of high quality (*i.e.*, fluency):
@@ -39,7 +37,7 @@ To provide models with data that is *as parallel as possible* (which is an inher
 
 To achieve an approximately fixed average character length of 125 in English translations across all languages, 100 samples of 100 characters were translated for every language to obtain a frequentist character-to-character ratio for every language translation pair. These ratios are shown below (direction is from source to English):
 
-`am: **1.56**`, `ar: **1.30**`, `bg: **1.04**`, `bn: **1.11**`, `cs: **1.13**`, `de: **0.94**`, `el: **0.92**`, `en: 1.00`, `es: **0.95**`, `et: **1.11**`, `fa: **1.19**`, `fi: **1.05**`, `fr: **0.92**`, `gu: **1.08**`, `ha: **1.00**`, `hi: **1.17**`, `hr: **1.11**`, `hu: **1.07**`, `id: **1.00**`, `ig: **1.09**`, `is: **1.03**`, `it: **0.97**`, `ja: **2.37**`, `kn: **1.02**`, `ko: **2.29**`, `ky: **1.02**`, `lt: **1.08**`, `lv: **1.10**`, `mk: **1.00**`, `ml: **0.88**`, `mr: **1.03**`, `nl: **0.95**`, `om: **0.82**`, `or: **1.07**`, `pa: **1.01**`, `pl: **1.03**`, `ps: **1.15**`, `pt: **1.01**`, `ro: **0.97**`, `ru: **1.07**`, `sn: **1.01**`, `sw: **1.00**`, `ta: **0.89**`, `te: **1.06**`, `ti: **1.31**`, `tl: **0.91**`, `tr: **1.05**`, `uk: **1.11**`, `yo: **1.08**`, and `zh: **4.22**`.
+`am: 1.56`, `ar: 1.30`, `bg: 1.04`, `bn: 1.11`, `cs: 1.13`, `de: 0.94`, `el: 0.92`, `en: 1.00`, `es: 0.95`, `et: 1.11`, `fa: 1.19`, `fi: 1.05`, `fr: 0.92`, `gu: 1.08`, `ha: 1.00`, `hi: 1.17`, `hr: 1.11`, `hu: 1.07`, `id: 1.00`, `ig: 1.09`, `is: 1.03`, `it: 0.97`, `ja: 2.37`, `kn: 1.02`, `ko: 2.29`, `ky: 1.02`, `lt: 1.08`, `lv: 1.10`, `mk: 1.00`, `ml: 0.88`, `mr: 1.03`, `nl: 0.95`, `om: 0.82`, `or: 1.07`, `pa: 1.01`, `pl: 1.03`, `ps: 1.15`, `pt: 1.01`, `ro: 0.97`, `ru: 1.07`, `sn: 1.01`, `sw: 1.00`, `ta: 0.89`, `te: 1.06`, `ti: 1.31`, `tl: 0.91`, `tr: 1.05`, `uk: 1.11`, `yo: 1.08`, and `zh: 4.22`.
 
 Ultimately, **42,667,664** source characters ($1/ratio*125*7500$ per language) were translated into **46,460,290** English characters (a mean of ~126.42 characters per sentence; not including `en`). 
 
@@ -47,7 +45,6 @@ Ultimately, **42,667,664** source characters ($1/ratio*125*7500$ per language) w
 To provide a small additional overview of the quality of the dataset in terms of noise from other languages being present in the individual source files, 10% of all source sentences (*i.e.*, 750 samples per language) were run trough Google's language detection API. The scores below represent the fractions of detected languages, weighted by the corresponding confidence values.
 
 | `am` | am: 0.999<br>ti: 0.001 | `ar` | ar: 1.000                                        | `bg` | bg: 1.000                    | `bn` | bn: 1.000                                        |
-|------|------------------------|------|--------------------------------------------------|------|------------------------------|------|--------------------------------------------------|
 | `cs` | cs: 0.998<br>sk: 0.001 | `de` | de: 0.995                                        | `el` | el: 1.000                    | `es` | es: 0.962<br>ca: 0.006<br>gn: 0.001              |
 | `et` | et: 1.000              | `fa` | fa: 1.000                                        | `fi` | fi: 1.000                    | `fr` | fr: 0.958                                        |
 | `gu` | gu: 1.000              | `ha` | ha: 0.995<br>es: 0.001<br>gn: 0.001<br>en: 0.001 | `hi` | hi: 0.998                    | `hr` | hr: 0.544<br>bs: 0.167<br>en: 0.004              |
@@ -63,8 +60,8 @@ To provide a small additional overview of the quality of the dataset in terms of
 
 A single listed language with a score of `1.000` means that every sample was detected as that language with full confidence (a perfect score). A single listed language with a score below perfect indicates that no other language was detected in any of the samples, but that Google was not always completely confident in its detection. In the latter case, considering that the authors of NewsCrawl deliberately scraped sentences of particular languages, the source set is highly likely to contain solely sentences of the intended source language. For other source languages, the language of some of the samples was detected to be a typologically similar one to the intended language that is often subject to *language-or-dialect* debates (*.e.g.*, `cs` and `sk`, or `hr` and `bs`). However, in the case of `so` (Somali) and `rw` (Kinyarwanda), the source set turned out to contain a high number of English sentences and was therefore deemed less useful and consequently deleted from the dataset (including in the above specifications). While the original NewsCrawl dataset contains more noisy source sets (such as a large number of Ukrainian sentences being present in the Russian source set), these seem to have been effectively filtered using the provided cleaning steps (see above).
 
-## 2. About the script: create a better version of GTNC
-We encourage everyone to create newer versions of the dataset; either with a larger amount of samples (requiring more Cloud Translation API Credit) or using more recent versions of Google Translate or NewsCrawl(-like datasets). The code in this repository can be used out-of-the-box to create your own many-languages-to-one dataset. All code is thoroughly documented, type-annotated, and PEP8-compliant, and should be straightforward to understand. A `requirements.txt` file is provided to help you setup a working environment. In addition to the code, a couple of tips are shown below. 
+## 2. About the script: create a better version of GTNC!
+We encourage everyone to create newer versions of the dataset; either with a larger amount of samples (requiring more Cloud Translation API Credit) or using more recent versions of Google Translate or NewsCrawl(-like datasets). The code in this repository can be used out-of-the-box to create your own many-languages-to-one dataset. All code is thoroughly documented, type-annotated, and PEP8-compliant, and should be straightforward to understand. A `requirements.txt` file is provided to help you set up a working environment. In addition to the code, a couple of tips are shown below. 
 
 ### Connecting with Google's API services
 Although Google provides documentation on [Authenticating and ‘how to start’](https://developers.google.com/people/quickstart/python) and on [how to use it's Python library to translate text](https://cloud.google.com/python/docs/reference/translate/latest/google.cloud.translate_v3.services.translation_service.TranslationServiceClient#google_cloud_translate_v3_services_translation_service_TranslationServiceClient_translate_text), it may be handy to be aware of the following:
@@ -76,7 +73,7 @@ Although Google provides documentation on [Authenticating and ‘how to start’
 ### Loading NewsCrawl
 The code works with all NewsCrawl or ‘NewsCrawl-like’ datasets. This simply means that:
 
-- A separate folder must be created for the dataset, *e.g.*, *news-crawl* (if diverging from the default name, remember to initialise `SourceDataset()` with the `config={'FOLDER': '**<yourfoldername>**'}` parameter)
+- A separate folder must be created for the dataset, *e.g.*, *news-crawl* (if diverging from the default name, remember to initialise `SourceDataset()` with the `config={'FOLDER': '<yourfoldername>'}` parameter)
 - This folder must contain a new folder for every language contained in the dataset, represented by ISO639-1 code, *e.g.*, `nl` or `bg`
 - These language-folders must contain `.gz` files that contain one sample (*i.e.*, a sentence) per line
 
@@ -89,7 +86,7 @@ Five separate example scripts are provided to generate newer versions of GTNC. W
 4. This script reads the source files (created while running example 3) and performs language detection on part of the samples for each language. Language detection annotation files are created.
 5. This script reads the source files (created while running example 3) and translates these into English. Target files are created.
 
-*For calculating Monocleaner scores, [Bitextor's repository](https://github.com/bitextor/monocleaner) contains clear instructions.*
+*For calculating Monocleaner scores, [Bitextor's repository](https://github.com/bitextor/monocleaner) already contains clear instructions.*
 
 ## Contact with authors
 Please contact us if you have any questions... (details should follow below)
