@@ -1,0 +1,17 @@
+bul
+eng
+slv
+mkd
+bel
+gyb
+gol
+deu
+sqi
+ell
+ita
+ron
+ekk
+lav
+ukr
+rus
+hbs
