@@ -44,6 +44,8 @@ Ultimately, **42,667,664** source characters ($1/ratio*125*7500$ per language) w
 ### Language detection
 To provide a small additional overview of the quality of the dataset in terms of noise from other languages being present in the individual source files, 10% of all source sentences (*i.e.*, 750 samples per language) were run trough Google's language detection API. The scores below represent the fractions of detected languages, weighted by the corresponding confidence values.
 
+|      |                        |      |                                                  |      |                              |      |                                                  |
+|------|------------------------|------|--------------------------------------------------|------|------------------------------|------|--------------------------------------------------|
 | `am` | am: 0.999<br>ti: 0.001 | `ar` | ar: 1.000                                        | `bg` | bg: 1.000                    | `bn` | bn: 1.000                                        |
 | `cs` | cs: 0.998<br>sk: 0.001 | `de` | de: 0.995                                        | `el` | el: 1.000                    | `es` | es: 0.962<br>ca: 0.006<br>gn: 0.001              |
 | `et` | et: 1.000              | `fa` | fa: 1.000                                        | `fi` | fi: 1.000                    | `fr` | fr: 0.958                                        |
