@@ -77,7 +77,7 @@ The code works with all NewsCrawl or ‘NewsCrawl-like’ datasets. This simply 
 - These language-folders must contain `.gz` files that contain one sample (*i.e.*, a sentence) per line
 
 ### Examples
-Five separate example scripts are provided to generate newer versions of GTNC. When proceeding in sequence, these samples will together produce a new dataset from scratch. It is recommended to read and modify each file accordingly before running. Most of the steps involve creating and loading cache files to prevent data from being lost.
+Five separate example scripts are provided to generate newer versions of GTNC. When proceeding in sequence, these samples will together produce a new dataset from scratch. It is recommended to read and modify each file accordingly before running. Most of the steps involve creating and loading cache files to prevent data from being lost. (Create a `cache` folder before you start!)
 
 1. This script first prints a language similarity metric for every language, calculated as the average overlap in [WALS](https://wals.info/) features (as a fraction) between the single language and all other languages. A low score indicates that the language adds a high amount of diversity to the dataset. For every language, the number of filled-in features is shown on the bottom. Afterwards, the script plots a matrix indicating the diversity of the languages contained in the dataset. Rows indicate languages, columns indicate WALS features, every square (element) is colored differently based on the class index corresponding to a certain language for a certain feature.
 2. This script parses the relevant NewsCrawl files (if not stored in cache), and displays the average length of all samples, per language.
