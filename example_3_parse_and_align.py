@@ -1,4 +1,4 @@
-from dataset import SourceDataset
+from SourceDataset import SourceDataset
 from fifty_languages import languages_to_include
 from collections import defaultdict
 from functions import translate_text
