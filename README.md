@@ -23,7 +23,7 @@ The following steps were performed on the data to ensure that individual samples
     - Across all languages, data is ‘parallel by year’: all sentences are sampled from news articles that appeared in 2020, 2021, or 2022.
 	- Data was cleaned of duplicates.
 2. Extra steps taken by us before translating
-    - Samples below 30 characters in length and above 400 were deleted
+    - Samples below 30 characters in length and above 400 were deleted.
 	- Samples that do not appear to be ‘standard sentences’ were deleted in greedy manner (*e.g.*, samples in a non-latin script language that contain any of `A-Za-z`; see comments in the code for the full specifics and the regular expressions).
 	- Samples deemed `short` or `bad` by the [JusText 3](https://github.com/miso-belica/jusText) module were deleted. Not supported for `am`, `sn`, `ti`, `om`, `pa`, `ha`, `ps`, `or`, and `ja` (note: the samples for these languages might therefore be of lesser quality).
 3. Steps taken after translating
