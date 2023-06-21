@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 import matplotlib.transforms as transforms
 import matplotlib.patches as patches
 import matplotlib.colors as colors
-import matplotlib.colors as mcolors
 import justext
 from collections import defaultdict
 from typing import Union as U, Tuple as T
