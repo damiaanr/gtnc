@@ -7,7 +7,7 @@ The dataset can be found in the `output` folder in this directory. The dataset c
 1. `source`: Source text in original languages (contained in NewsCrawl)
 2. `translated`: Corresponding English translations of source texts
 
-Every folder contains either a `.src` or a `.trg` file for every language containg either source or translated (target) samples in line-by-line manner. If available, corresponding fluency scores are stored in `.scores` files (see below under *Cleaning steps*). Additionally, line-by-line Google Language Detection analyses for the first 750 samples are contained in `.detect` files (the ISO639-1 code of the detected language is followed by the confidence value).
+Every folder contains either a `.src` or a `.trg` file for every language containing either source or translated (target) samples in line-by-line manner. If available, corresponding fluency scores are stored in `.scores` files (see below under *Cleaning steps*). Additionally, line-by-line Google Language Detection analyses for the first 750 samples are contained in `.detect` files (the ISO639-1 code of the detected language is followed by the confidence value).
 
 ### Details
 The dataset contains **7,500** samples of **~125 characters**-long translations in English (and their source texts) for **50** languages\* with the following ISO639-1 codes: `am`, `ar`, `bg`, `bn`, `cs`, `de`, `el`, `en`, `es`, `et`, `fa`, `fi`, `fr`, `gu`, `ha`, `hi`, `hr`, `hu`, `id`, `ig`, `is`, `it`, `ja`, `kn`, `ko`, `ky`, `lt`, `lv`, `mk`, `ml`, `mr`, `nl`, `om`, `or`, `pa`, `pl`, `ps`, `pt`, `ro`, `ru`, `sn`, `sw`, `ta`, `te`, `ti`, `tl`, `tr`, `uk`, `yo`, and `zh`
