@@ -1,5 +1,5 @@
 # Google Translations from NewsCrawl (GTNC)
-This repository contains (1) a *many-to-one* dataset of original texts in 50 source languages and their corresponding translations into English using a recent version of Google Translate, and (2) the Python code that was used to generate it.
+This repository contains (1) a *many-to-one* dataset of original texts in 50 source languages and their corresponding translations into English using a recent version of Google Translate, and (2) the Python code that was used to generate it. The corresponding paper is accepted to appear at the SIGTYP workshop, co-located with EACL'24, in Malta.
 
 ## 1. About the dataset: use the data we generated!
 The dataset can be found in the `output` folder in this directory. The dataset contains two folders:
@@ -88,4 +88,5 @@ Five separate example scripts are provided to generate newer versions of GTNC. W
 *For calculating Monocleaner scores, [Bitextor's repository](https://github.com/bitextor/monocleaner) already contains clear instructions.*
 
 ## Contact with authors
-Please contact us if you have any questions... (details should follow below)
+- _Damiaan Reijnaers_ (info@damiaanreijnaers.nl)
+- _Charlotte Pouw_ (c.m.pouw@uva.nl)
